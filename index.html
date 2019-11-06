@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <title></title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <link rel="shortcut icon" href="http://18.162.172.56:84/favicon.ico">
+    <link href="http://18.162.172.56:84/css/api.css?6" rel="stylesheet">
+    <script src="http://18.162.172.56:84/js/jquery-3.4.1.min.js"></script>
+    <script src="http://18.162.172.56:84/js/clipboard.min.js"></script>
+</head>
+<body id="payment_code">
+<div class="area">
+    <div class="ticket-bd"></div>
+    <div class="type icon alipay"></div>
+    <h1 style="margin: 20px 0px;">请手动输入 ￥<span id="copy_price">109.91</span></h1>
+    <p style="margin:0;">切记支付这个金额 <b style="color: #ff132e;font-size:22px;">109.91</b>，否则<span
+                style="color: #ff132e;">无法自动上分</span>。</p>
+    <p style="margin:10px 20px 20px;">实际到账 <b style="color: #ff132e;font-size:18px;">110.00</b>，为您节省 <b
+                style="color: #ff132e;font-size:18px;">0.09</b></p>
+    <div>
+        <img id="qr" style="width:150px; border-radius: 3px;"
+             src="data:image/png;base64,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">
+    </div>
+    
+    
+    
+    <a style="display: inline-block;"
+       href="https://qr.alipay.com/fkx041431mwufjssu9zzj6f "
+       target="_blank"
+       class="btn alipay_btn" id="jump_alipay_btn">打开支付宝付款</a>
+    <p style="color:#ff9800;" id="count_down"><span class="time" id="expire_time"></span>后订单过期，请及时支付</p>
+    <p style="color: #ff132e;margin:20px;">如无法跳转，请截图保存到手机相册，打开支付宝「扫一扫」付款</p>
+    <div style="height:60px;border-top: dashed #eeeeee 2px;" id="footer">
+        <div class="scan icon"></div>
+        <span style="display: inline-block;vertical-align: middle;line-height: normal;margin-top:-47px;">打开支付宝「扫一扫」付款</span>
+    </div>
+    <div class="ticket-bd-bottom"></div>
+</div>
+<div class="vux-alert pay">
+    <div class="vux-x-dialog">
+        <div class="weui-mask"></div>
+        <div class="weui-dialog">
+            <div class="title">注意</div>
+            <div class="content">
+                <p style="text-align: center;">
+                    手动输入容易出错，请点击复制金额。
+                </p>
+            </div>
+            <div class="btn-wrap" style="text-align: center;display: block;">
+                <a href="javascript:;" class="submit copyMoney" data-clipboard-text="109.91">点击复制金额</a>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    var server_time = 1571382305;
+    var expire_time = 1571371495 + 18000;
+
+    var data = {"code":"100160","sn":"201910181204556139733920","sign":"qwer123"};
+
+    var success_href = 'http://18.162.172.56:84/success' + '?sn=' + data.sn + '&sign=' + data.sign;
+</script>
+<script src="http://18.162.172.56:84/js/store.js"></script>
+<script>
+    $(function () {
+        var clipboard = new ClipboardJS('.copyMoney');
+        clipboard.on('success', function (e) {
+            $(".copyMoney").text('复制成功');
+            $(".vux-alert").remove();
+            setTimeout(function () {
+                $(".copyMoney").text('点击复制金额');
+            }, 2000);
+            e.clearSelection();
+        });
+    })
+</script>
+</body>
+</html>
